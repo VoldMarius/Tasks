@@ -9,7 +9,6 @@
 
 Console.WriteLine("Введите целое число:  ");
 int num = Convert.ToInt32 (Console.ReadLine());
-int sqv = num * num;
-Console.WriteLine(sqv);
+Console.WriteLine(num * num);
 
  
