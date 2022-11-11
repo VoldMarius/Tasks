@@ -9,17 +9,17 @@
 // a = -3, b = 9 -> Нет
 
 Console.Write("Введите первое число:  ");
-int num = Convert.ToInt32 (Console.ReadLine());
+int num = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Введите второе число:  ");
-int num1 = Convert.ToInt32 (Console.ReadLine());
-int sqv = num *num;
+int num1 = Convert.ToInt32(Console.ReadLine());
+int sqv = num * num;
 
 if (sqv == num1)
 {
-Console.Write("Второе число является квадратом первого");
+    Console.Write("Второе число является квадратом первого");
 }
 else
 {
-Console.Write("Второе число не является квадратом первого");
+    Console.Write("Второе число не является квадратом первого");
 }
