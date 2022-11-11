@@ -9,6 +9,7 @@
 
 Console.WriteLine("Введите целое число:  ");
 int num = Convert.ToInt32 (Console.ReadLine());
-Console.WriteLine(num * num);
+int sqv = num * num;
+Console.WriteLine($"Квадрат числа равен:  {num} = {sqv}");
 
  
