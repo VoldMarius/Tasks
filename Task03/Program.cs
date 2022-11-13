@@ -21,5 +21,5 @@ else if (num == 6)
     Console.Write("Суббота");
 else if (num == 7)
     Console.Write("Восскресение");
-else Console.Write("Введен не верный номер дня недели");    
+else Console.Write("Введен не верный номер дня недели");
 
