@@ -18,6 +18,4 @@ if (num1 > num)
     max = num1;
 else if (num2 > num)
     max = num2;
-if (num2 > num1)
-    max = num2;
 Console.Write(max);
