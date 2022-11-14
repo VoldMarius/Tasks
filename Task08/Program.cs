@@ -3,9 +3,9 @@
 // // 5 -> 2, 4
 // // 8 -> 2, 4, 6, 8
 Console.Write("Введите число N:  ");
-int N = Convert.ToInt32(Console.ReadLine());
+int n = Convert.ToInt32(Console.ReadLine());
 int count = 1;
-while (count <= N)
+while (count <= n)
 {
     if (count % 2 == 0)
 
