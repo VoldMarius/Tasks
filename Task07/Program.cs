@@ -5,6 +5,6 @@
 // 782 -> 2
 // 918 -> 8
 Console.Write("Введите трёзначное число:  ");
-int N = Convert.ToInt32(Console.ReadLine());
-int last = N % 10;
+int n = Convert.ToInt32(Console.ReadLine());
+int last = n % 10;
 Console.WriteLine(last);

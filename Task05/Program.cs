@@ -5,9 +5,9 @@
 // 2 -> -2,-1,0,1,2
 
 Console.Write("Введите число N:  ");
-int N = Convert.ToInt32(Console.ReadLine());
-int count = -N;
-while (count <= N)
+int n = Convert.ToInt32(Console.ReadLine());
+int count = -n;
+while (count <= n)
 {
     Console.WriteLine(count);
     count++;
