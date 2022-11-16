@@ -14,8 +14,13 @@ int ThreeDig(int num)
     }
     return num % 10;
 }
-if (digit < 100)
+if (digit < 100 && digit > 0)
     Console.WriteLine("третьей цифры нет");
+else if (digit < 0)
+{
+    digit = -1 * digit;
+    Console.WriteLine(ThreeDig(digit));
+}
 else
     Console.WriteLine(ThreeDig(digit));
 
