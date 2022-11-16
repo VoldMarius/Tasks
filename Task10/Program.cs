@@ -15,10 +15,10 @@ int SecondDigit(int num)
     int rez = (num / 10) % 10;
     return rez;
 }
-if (digit < 999 )
+if (digit < 999)
 {
     int secondDig = SecondDigit(digit);
     Console.Write($"Вторая цифра --> {secondDig}");
 }
 else
-    Console.Write("Введите трёхзначное число:    ");
+    Console.Write("Вы ввели не то:    ");
