@@ -22,3 +22,5 @@ if (digit < 999)
 }
 else
     Console.Write("Вы ввели не то:    ");
+
+
