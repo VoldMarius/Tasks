@@ -1,18 +1,29 @@
-﻿// Задача 22: Напишите программу, которая
-// принимает на вход число (N) и выдаёт таблицу
-// квадратов чисел от 1 до N.
-// 5 -> 1, 4, 9, 16, 25.
-// 2 -> 1,4
-Console.WriteLine("Введите число N");
-int num1 = Convert.ToInt32(Console.ReadLine());
+﻿// Задача 21
+// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+// A (3,6,8); B (2,1,-7), -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+Console.WriteLine("Введите координаты 1 точки ");
+Console.Write("X: ");
+int x = Convert.ToInt32(Console.ReadLine());
+Console.Write("Y: ");
+int y = Convert.ToInt32(Console.ReadLine());
+Console.Write("Z: ");
+int z = Convert.ToInt32(Console.ReadLine());
 
-void Square(int n)
+Console.WriteLine("Введите координаты 2 точки ");
+Console.Write("X1: ");
+int x1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Y1: ");
+int y1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Z1: ");
+int z1 = Convert.ToInt32(Console.ReadLine());
 
+
+double Distance(int xc, int xc1, int yc, int yc1, int zc, int zc1)
 {
-for (int i = 1; i <= n ; i++)
-{
-    Console.WriteLine($"{i} -> {i*i} " );
+    double dist = Math.Sqrt((xc1 - xc) * (xc1 - xc) + (yc1 - yc) * (yc1 - yc) + (zc1 - zc) * (zc1 - zc));
+    double res = Math.Round(dist, 2, MidpointRounding.ToZero);
+    return res;
+}
 
-}
-}
-Square(num1);
+Console.WriteLine(Distance(x, x1, y, y1, z, z1));
