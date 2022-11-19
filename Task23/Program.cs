@@ -8,11 +8,6 @@
 // 5 | 125
 Console.WriteLine("Введите число N");
 int num = Convert.ToInt32(Console.ReadLine());
-if (num < 0)
-{
-    num = num * -1;
-}
-
 
 void Сube(int n)
 {
@@ -21,4 +16,9 @@ void Сube(int n)
         Console.WriteLine($"{i} -> {i * i * i} ");
     }
 }
-Сube(num);
+if (num < 0)
+{
+    Console.WriteLine("Введено неверное число N");
+}
+else
+    Сube(num);
