@@ -5,16 +5,62 @@
 // 12821 -> да
 // 23432 -> да
 
-Console.Write("Введите 5-ти число:    ");
+
+// Первое решение:(По условию задачи "принимает на вход пятизначное число" )
+
+// Console.Write("Введите пятизначное число:    ");
+// int digit = Convert.ToInt32(Console.ReadLine());
+// void Palindrome(int n)
+// {
+//     if (n < 100000 && n >= 10000)
+//     {
+//         if (n / 10000 == n % 10 && n / 1000 % 10 == n / 10 % 10)
+//         {
+//             Console.Write("Число является палиндромом");
+//         }
+//         else
+//             Console.Write("Число не является палиндромом");
+//     }
+//     else
+//         Console.Write("Посчитайте цифры! Их должно быть пять! ");
+// }
+// Palindrome(digit);
+
+
+// Второе решение:(для любого числа типа int)
+
+Console.Write("Введите любое число:    ");
 int digit = Convert.ToInt32(Console.ReadLine());
-if (digit < 100000 && digit >= 10000)
+int Palindrome(int n)
 {
-    if(digit/10000 == digit%10 && digit/1000%10 == digit/10%10)
+    if (n > 9)
     {
-        Console.Write("Число является палиндромом");
+        string revers_n = (" ");
+        int remainder = 0;
+        while (n > 0)
+        {
+            remainder = n % 10;
+            n = n / 10;
+            revers_n = revers_n + remainder;
+        }
+        return (Convert.ToInt32(revers_n));
     }
     else
- Console.Write("Число не является палиндромом");
+        return 0;
 }
+Palindrome(digit);
+
+if (digit < 0)
+{
+    digit = digit * -1;
+}
+if (digit == Palindrome(digit))
+{
+    Console.Write("Число является палиндромом");
+}
+else if (digit < 10)
+    Console.Write("Единичное число заведомо является палиндромом");
+else if (digit < 0)
+    digit = digit * -1;
 else
-Console.Write("Посчитайте цифры! Их должно быть пять! ");
+    Console.Write("Число не является палиндромом");

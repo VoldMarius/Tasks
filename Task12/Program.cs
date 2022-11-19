@@ -12,7 +12,6 @@ int num1 = Convert.ToInt32(Console.ReadLine());
 bool Сompar(int n, int n1)
 {
     return n % n1 == 0;
-
 }
 int Remainder(int n, int n1)
 {

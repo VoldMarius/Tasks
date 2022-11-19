@@ -12,12 +12,13 @@ if (num < 0)
 {
     num = num * -1;
 }
-Square(num);
 
-void Square(int n)
+
+void Сube(int n)
 {
     for (int i = 1; i <= n; i++)
     {
         Console.WriteLine($"{i} -> {i * i * i} ");
     }
 }
+Сube(num);
