@@ -64,3 +64,49 @@ else if (digit < 0)
     digit = digit * -1;
 else
     Console.Write("Число не является палиндромом");
+
+
+// Решение без строки
+Console.Write("Введите любое число:    ");
+int digit = Convert.ToInt32(Console.ReadLine());
+
+int Palindrome(int n)
+{
+    if (n > 9)
+    {
+        int count = 0;
+        int number_digit = n;
+        double revers_n = 0;
+
+        while (number_digit > 0)
+        {
+            number_digit = number_digit / 10;
+            count++;
+        }
+        number_digit = n;
+        for (int i = 0; count > 0; i++)
+        {
+            revers_n = revers_n + number_digit % 10 * (Math.Pow(10, count - 1));
+            count--;
+            number_digit = number_digit / 10;
+        }
+        n = Convert.ToInt32(revers_n);
+        return (n);
+        }
+    return (0);
+}
+Palindrome(digit);
+if (digit < 0)
+{
+    digit = digit * -1;
+}
+if (digit == Palindrome(digit))
+{
+    Console.Write("Число является палиндромом");
+}
+else if (digit < 10)
+    Console.Write("Единичное число заведомо является палиндромом");
+else if (digit < 0)
+    digit = digit * -1;
+else
+    Console.Write("Число не является палиндромом");
