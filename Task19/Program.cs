@@ -29,41 +29,41 @@
 
 // Второе решение:(для любого числа типа int)
 
-Console.Write("Введите любое число:    ");
-int digit = Convert.ToInt32(Console.ReadLine());
-int Palindrome(int n)
-{
-    if (n > 9)
-    {
-        string revers_n = (" ");
-        int remainder = 0;
-        while (n > 0)
-        {
-            remainder = n % 10;
-            n = n / 10;
-            revers_n = revers_n + remainder;
-        }
-        return (Convert.ToInt32(revers_n));
-    }
-    else
-        return 0;
-}
-Palindrome(digit);
+// Console.Write("Введите любое число:    ");
+// int digit = Convert.ToInt32(Console.ReadLine());
+// int Palindrome(int n)
+// {
+//     if (n > 9)
+//     {
+//         string revers_n = (" ");
+//         int remainder = 0;
+//         while (n > 0)
+//         {
+//             remainder = n % 10;
+//             n = n / 10;
+//             revers_n = revers_n + remainder;
+//         }
+//         return (Convert.ToInt32(revers_n));
+//     }
+//     else
+//         return 0;
+// }
+// Palindrome(digit);
 
-if (digit < 0)
-{
-    digit = digit * -1;
-}
-if (digit == Palindrome(digit))
-{
-    Console.Write("Число является палиндромом");
-}
-else if (digit < 10)
-    Console.Write("Единичное число заведомо является палиндромом");
-else if (digit < 0)
-    digit = digit * -1;
-else
-    Console.Write("Число не является палиндромом");
+// if (digit < 0)
+// {
+//     digit = digit * -1;
+// }
+// if (digit == Palindrome(digit))
+// {
+//     Console.Write("Число является палиндромом");
+// }
+// else if (digit < 10)
+//     Console.Write("Единичное число заведомо является палиндромом");
+// else if (digit < 0)
+//     digit = digit * -1;
+// else
+//     Console.Write("Число не является палиндромом");
 
 
 // Решение без строки
