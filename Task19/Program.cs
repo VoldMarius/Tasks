@@ -74,32 +74,24 @@ int Palindrome(int n)
 {
     if (n > 9)
     {
-        int count = 0;
-        int number_digit = n;
-        double revers_n = 0;
+        int number_digit = 0;
+        int revers_n = 0;
+        for (int i = 0; n > 0; i++)
+        {
+            number_digit = n % 10;
+            revers_n = (revers_n + number_digit) * 10;
+            n = n / 10;
 
-        while (number_digit > 0)
-        {
-            number_digit = number_digit / 10;
-            count++;
         }
-        number_digit = n;
-        for (int i = 0; count > 0; i++)
-        {
-            revers_n = revers_n + number_digit % 10 * (Math.Pow(10, count - 1));
-            count--;
-            number_digit = number_digit / 10;
-        }
-        n = Convert.ToInt32(revers_n);
-        return (n);
-        }
+        revers_n =revers_n/10;
+        Console.Write(revers_n);
+        Console.WriteLine();
+        return (revers_n);
+        
+    }
     return (0);
 }
 Palindrome(digit);
-if (digit < 0)
-{
-    digit = digit * -1;
-}
 if (digit == Palindrome(digit))
 {
     Console.Write("Число является палиндромом");
