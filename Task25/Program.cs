@@ -5,19 +5,19 @@
 
 Console.WriteLine("Введите число A");
 int num = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число B");
+Console.WriteLine("Введите натуральноек число B");
 int num1 = Convert.ToInt32(Console.ReadLine());
-int Degree(int j, int n)
+int DegreeNum(int j, int n)
 {
 
-    int degree = 1;
+    int degreeNum = 1;
     for (int i = 1; i <= n; i++)
     {
-        degree = degree * j;
+        degreeNum = degreeNum * j;
     }
-    return degree;
+    return degreeNum;
 }
 if (num1<0)
 Console.WriteLine("Введите натуральное число В");
 else
-Console.WriteLine($"Число {num} в натуральной степени {num1} = {Degree(num, num1)}");
+Console.WriteLine($"Число {num} в степени {num1} = {DegreeNum(num, num1)}");
