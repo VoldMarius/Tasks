@@ -8,13 +8,17 @@ Console.WriteLine("Введите число ");
 int digit = Convert.ToInt32(Console.ReadLine());
 int SummNum(int num)
 {
-    int summNum = 0;
-    for (int i = 0; num > 0; i++)
+    if (num != 0)
     {
-        summNum = summNum + num % 10;
-        num = num / 10;
+        int summNum = 0;
+        for (int i = 0; num > 0; i++)
+        {
+            summNum = summNum + num % 10;
+            num = num / 10;
+        }
+        return summNum;
     }
-    return summNum;
+return 1;
 }
 if (digit < 0)
 {
