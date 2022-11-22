@@ -83,11 +83,9 @@ int Palindrome(int n)
             n = n / 10;
 
         }
-        revers_n =revers_n/10;
-        Console.Write(revers_n);
-        Console.WriteLine();
+        revers_n = revers_n / 10;
         return (revers_n);
-        
+
     }
     return (0);
 }
