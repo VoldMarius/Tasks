@@ -9,7 +9,6 @@ Console.WriteLine("Введите натуральноек число B");
 int num1 = Convert.ToInt32(Console.ReadLine());
 int DegreeNum(int j, int n)
 {
-
     int degreeNum = 1;
     for (int i = 1; i <= n; i++)
     {

@@ -57,6 +57,6 @@ int MinElement(int[] array)
 
 int minElementX = MinElement(arr);
 int minElementY = MinElement(arr1);
-Console.Write($"Mинимальных чётный элемент массива с числом элементов Х = {minElementX}");
+Console.Write($"Mинимальный чётный элемент массива с числом элементов Х = {minElementX}");
 Console.WriteLine();
-Console.Write($"Mинимальных чётный элемент массива с числом элементов Y = {minElementY}");
+Console.Write($"Mинимальный чётный элемент массива с числом элементов Y = {minElementY}");
