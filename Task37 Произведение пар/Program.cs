@@ -53,7 +53,7 @@ Console.WriteLine("Введите длинну массива: ");
 int sizeMass = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите минимальное значение массива: ");
 int minMass = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите минимальное значение массива: ");
+Console.WriteLine("Введите максимальное значение массива: ");
 int maxMass = Convert.ToInt32(Console.ReadLine());
 
 int[] arr = CreateRandomArray(sizeMass, minMass, maxMass);
