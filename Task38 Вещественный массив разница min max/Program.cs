@@ -15,7 +15,7 @@ double[] CreateArrayRndDouble(int size, int min, int max)// Вывод веще�
 
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = rnd.NextDouble() * (max -min) + min;
+        array[i] = rnd.NextDouble() * (max - min) + min;
     }
     return array;
 }
@@ -34,25 +34,28 @@ void PrintArray(double[] array, string elem1, string elem2)//Метод выво
 double MaxElementArray(double[] array)// Метод нахождения максимального элемента массива
 {
     double maxElementArray = array[0];
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 1; i < array.Length; i++)
     {
-        if (array[i] > array[0]) maxElementArray = array[i];
+        if (array[i] > maxElementArray) maxElementArray = array[i];
     }
-return maxElementArray;
+    return maxElementArray;
 }
 double MinElementArray(double[] array)// Метод нахождения минимального элемента массива
 {
     double minElementArray = array[0];
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 1; i < array.Length; i++)
     {
-        if (array[i] < array[0]) minElementArray = array[i];
+        if (array[i] < minElementArray) minElementArray = array[i];
     }
-return minElementArray;
+    return minElementArray;
 }
 double[] arr = CreateArrayRndDouble(sizeMass, minMass, maxMass);
-double diffMaxMinElements = MaxElementArray(arr)-MinElementArray(arr);
+double diffMaxMinElements = MaxElementArray(arr) - MinElementArray(arr);
 PrintArray(arr, "[", "] ->  ");
-Console.WriteLine(Math.Round(diffMaxMinElements,1, MidpointRounding.ToZero));
+Console.WriteLine(Math.Round(diffMaxMinElements, 1, MidpointRounding.ToZero));
+Console.WriteLine($"Максимальный элемент массива:  {(Math.Round(MaxElementArray(arr), 1, MidpointRounding.ToZero))}");
+Console.WriteLine($"Минимальный элемент массива:  {(Math.Round(MinElementArray(arr), 1, MidpointRounding.ToZero))}");
+
 // using SistemGlobalization
 // NumberFormatInfo numberFormatInfo = new numberFormatInfo() 
 // {
