@@ -49,7 +49,7 @@ int[] RemoveElement(int[] arrayR, int index) //Метод удоления ел�
 }
 // PrintArray(RemoveElement(arr, 5));
 
-int[] EvenSortArray(int[] array) //Метод сортировки по чётному числу
+int[] EvenSortArray(int[] array) //Метод сортировки по нечётному числу
 {
     int length = array.Length;
     for (int i = 0; i < array.Length; i++)
@@ -64,7 +64,7 @@ int[] EvenSortArray(int[] array) //Метод сортировки по чётн
 }
 
 
-int[] OddSortArray(int[] array) //Метод сортировки по нечётному числу
+int[] OddSortArray(int[] array) //Метод сортировки по чётному числу
 {
     int length = array.Length;
     for (int i = 0; i < array.Length; i++)
