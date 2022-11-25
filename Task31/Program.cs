@@ -51,8 +51,10 @@ int SummaNegative(int[] array)
     return summaNegative;
 }
 int[]arr = CreateRandomArray(12, -9, 9);
+int summaNegativ = SummaNegative(arr);
+int summaPositive =SummaPositive(arr);
 PrintArray(arr);
 Console.WriteLine();
-Console.WriteLine($"Сумма отрицательных элементов:{SummaNegative(arr)}");
+Console.WriteLine($"Сумма отрицательных элементов:{summaNegativ}");
 Console.WriteLine();
-Console.WriteLine($"Сумма положительных элементов:{SummaPositive(arr)}");
+Console.WriteLine($"Сумма положительных элементов:{summaPositive}");
