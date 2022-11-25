@@ -16,9 +16,6 @@ int[] CreateRandomArray(int size, int min, int max)//Метод обьявлен
     }
     return array;
 }
-
-
-
 void PrintArray(int[] array)//Метод вывода массива
 {
     Console.Write("[");
@@ -32,9 +29,7 @@ void PrintArray(int[] array)//Метод вывода массива
     Console.Write("]");
     Console.WriteLine();
 }
-int[]arr = CreateRandomArray(12, -9, 9);
-PrintArray(arr);
-Console.WriteLine();
+
 int SummaPositive(int[] array)
 {
     int summaPositive = 0;
@@ -45,8 +40,6 @@ int SummaPositive(int[] array)
     }
     return summaPositive;
 }
-Console.WriteLine($"Сумма положительных элементов:{SummaPositive(arr)}");
-
 int SummaNegative(int[] array)
 {
     int summaNegative = 0;
@@ -57,5 +50,9 @@ int SummaNegative(int[] array)
     }
     return summaNegative;
 }
+int[]arr = CreateRandomArray(12, -9, 9);
+PrintArray(arr);
 Console.WriteLine();
 Console.WriteLine($"Сумма отрицательных элементов:{SummaNegative(arr)}");
+Console.WriteLine();
+Console.WriteLine($"Сумма положительных элементов:{SummaPositive(arr)}");
