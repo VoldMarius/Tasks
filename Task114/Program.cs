@@ -63,8 +63,20 @@ int[] EvenSortArray(int[] array) //Метод сортировки по чётн
     return array;
 }
 
-// EvenSortArray(arr);
-Console.WriteLine();
+
+int[] OddSortArray(int[] array) //Метод сортировки по нечётному числу
+{
+    int length = array.Length;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 != 0)
+        {
+            array = (RemoveElement(array, i));
+            i = i - 1;
+        }
+    }
+    return array;
+}
 
 void SortArray(int[] arrayS)// Метод сортировки массива
 {
@@ -86,3 +98,5 @@ void SortArray(int[] arrayS)// Метод сортировки массива
 }
 
 SortArray(EvenSortArray(arr));
+
+SortArray(OddSortArray(arr));
