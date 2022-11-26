@@ -33,10 +33,10 @@ Console.WriteLine();
 void MaxArray(int[] arrayM)// Метод сортировки массива
 {
     int max = arrayM[0];
-    for (int i = 1; i < arrayM.Length; i++)
+    for (int i = 0; i < arrayM.Length; i++)
     {
 
-        if (arrayM[i] > arrayM[i-1])
+        if (arrayM[i] > max)
         {
             max = arrayM[i];
         }
