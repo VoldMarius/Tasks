@@ -19,17 +19,20 @@ double[] CreateArrayRndDouble(int size, int min, int max)// Вывод веще�
     }
     return array;
 }
-void PrintArray(double[] array, string elem1, string elem2)//Метод вывода массива
+void NoteMaxMin(double[] array, double max, double min, string el1, string el2)// Метод вывода массива с помеченными нечетными элементами
 {
-    Console.Write(elem1);
+    Console.Write(el1);
     for (int i = 0; i < array.Length; i++)
     {
-        if (i < array.Length - 1)
-            Console.Write($"{Math.Round(array[i], 1, MidpointRounding.ToZero)}  ");
-        else
-            Console.Write($"{Math.Round(array[i], 1, MidpointRounding.ToZero)}");
+        if (array[i] == min || array[i] == max)
+            Console.Write($"{(Math.Round(array[i], 1, MidpointRounding.ToZero))}* ");
+        else if (i != array.Length - 1)
+            Console.Write($"{(Math.Round(array[i], 1, MidpointRounding.ToZero))}, ");
+        else if (i == array.Length - 1)
+            Console.Write($"{(Math.Round(array[i], 1, MidpointRounding.ToZero))}");
+       
     }
-    Console.Write(elem2);
+    Console.Write(el2);
 }
 double MaxElementArray(double[] array)// Метод нахождения максимального элемента массива
 {
@@ -51,13 +54,7 @@ double MinElementArray(double[] array)// Метод нахождения мин�
 }
 double[] arr = CreateArrayRndDouble(sizeMass, minMass, maxMass);
 double diffMaxMinElements = MaxElementArray(arr) - MinElementArray(arr);
-PrintArray(arr, "[", "] ->  ");
+NoteMaxMin(arr, MaxElementArray(arr),MinElementArray(arr),"[","] ->   ");
 Console.WriteLine(Math.Round(diffMaxMinElements, 1, MidpointRounding.ToZero));
-Console.WriteLine($"Максимальный элемент массива:  {(Math.Round(MaxElementArray(arr), 1, MidpointRounding.ToZero))}");
-Console.WriteLine($"Минимальный элемент массива:  {(Math.Round(MinElementArray(arr), 1, MidpointRounding.ToZero))}");
-
-// using SistemGlobalization
-// NumberFormatInfo numberFormatInfo = new numberFormatInfo() 
-// {
-//     NumberDecimalSeparator = ".",
-// };
+Console.WriteLine($"Максимальный элемент массива:   {(Math.Round(MaxElementArray(arr), 1, MidpointRounding.ToZero))}*");
+Console.WriteLine($"Минимальный элемент массива:    {(Math.Round(MinElementArray(arr), 1, MidpointRounding.ToZero))}*");
