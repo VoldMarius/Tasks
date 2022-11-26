@@ -18,29 +18,34 @@ int[] CreateRandomArray(int size, int min, int max)//Метод обьявлен
     }
     return array;
 }
-void PrintArray(int[] array, string elem1, string elem2)//Метод вывода массива
+int SummElementOddIndex(int[] array) //Метод нахождения суммы элементов, стоящих на нечётных позициях.
 {
-    Console.Write(elem1);
+    int summElementOddIndex = 0;
+    for (int i = 1; i < array.Length; i += 2)
+    {
+        summElementOddIndex = summElementOddIndex + array[i];
+    }
+    return summElementOddIndex;
+}
+void NoteOdd(int[] array, string el1, string el2)// Метод вывода массива с помеченными нечетными элементами
+{
+    Console.Write(el1);
     for (int i = 0; i < array.Length; i++)
     {
-        if (i < array.Length - 1)
-            Console.Write($"{array[i]},");
-        else
+        if (i % 2 != 0)
+            Console.Write($"{array[i]}* ");
+        else if (i != array.Length - 1)
+            Console.Write($"{array[i]}, ");
+        else if (i == array.Length - 1)
             Console.Write($"{array[i]}");
+        else if (i == array.Length - 1 && i % 2 != 0)
+            Console.Write($"{array[i]}");
+
     }
-    Console.Write(elem2);
+    Console.Write(el2);
 }
 int[] arr = CreateRandomArray(sizeMass, minMass, maxMass);
-int SumElementOddIndex(int[] array) //Метод нахождения суммы элементов, стоящих на нечётных позициях.
-{
-   
-int sumElementOddIndex = 0;
-    for (int i = 1; i < array.Length ; i += 2)
-    {
-        sumElementOddIndex = sumElementOddIndex + array[i];
-    }
-    return sumElementOddIndex;
-}
-int sumElements = SumElementOddIndex(arr);
-PrintArray(arr, "[", "] ->  ");
-Console.Write(sumElements);
+int summElements = SummElementOddIndex(arr);
+Console.WriteLine();
+NoteOdd(arr, "[", "] --> Сумма элементов, стоящих на нечётных позициях:  ");
+Console.Write(summElements);
