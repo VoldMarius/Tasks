@@ -75,7 +75,7 @@ void SortArrayMaxMin(int[] arrayS)// Метод сортировки масси�
     }
     // PrintArray(arrayS);
 }
-bool СheckArrayOrder(int[] array, int[] cloneArray)
+bool СheckArrayOrder(int[] array, int[] cloneArray)//Метод сравнения массивов на равенство
 {
     int count = 0;
     for (int i = 0; i < array.Length; i++)
@@ -91,7 +91,7 @@ bool СheckArrayOrder(int[] array, int[] cloneArray)
     }
     return false;
 }
-bool СheckArrayOrder1(int[] array)
+bool СheckArrayOrder1(int[] array)//Метод проверки массива на упорядоченность
 {
     int count = 0;
     int count1 = 0;
@@ -121,6 +121,5 @@ bool СheckArrayOrder1(int[] array)
 }
 int[] arr = CreateRandomArray(sizeMass, minMass, maxMass);
 PrintArray(arr, "[", "] ->  ");
-// SortArray(cloneArray);
 string result = СheckArrayOrder1(arr) ? "Массив упорядоченный " : "Массив неупорядоченный";
 Console.Write(result);
