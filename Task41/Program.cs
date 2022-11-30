@@ -4,13 +4,16 @@
 // -1, -7, 567, 89, 223-> 3
 Console.WriteLine("Введите планируемое кол-во чисел М  ");
 int m = Convert.ToInt32(Console.ReadLine());
-int[] arr = new int[m];
+int[]InputNumbers(int plannedNumber)
+{
+int[] array = new int[plannedNumber];
 int number = 1;
-for (int i = 0; i < m; i++)
+for (int i = 0; i < plannedNumber; i++)
 {
     Console.WriteLine($"Введите {number} число  ");
-    arr[i] = Convert.ToInt32(Console.ReadLine());
+    array[i] = Convert.ToInt32(Console.ReadLine());
     number++;
+}return array;
 }
 int NumberPositive(int[] array)
 {
@@ -36,5 +39,6 @@ void PrintArray(int[] array, string elem1, string elem2)
     }
     Console.Write(elem2);
 }
+int[] arr= InputNumbers(m);
 PrintArray(arr, "[", "] -->");
 Console.Write(NumberPositive(arr));
