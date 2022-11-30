@@ -2,7 +2,7 @@
 // сколько чисел больше 0 ввёл пользователь.
 // 0, 7, 8, -2, -2 -> 2
 // -1, -7, 567, 89, 223-> 3
-Console.WriteLine("Введите планируемое для ввода кол-во чисел М  ");
+Console.WriteLine("Введите планируемое кол-во чисел М  ");
 int m = Convert.ToInt32(Console.ReadLine());
 int[] arr = new int[m];
 int number = 1;
