@@ -45,7 +45,7 @@ PrintArray(arr, "[", "] -->");
 Console.Write(NumberPositive(arr));
 
 
-//Решение с испольхзованием стороних методов
+// Решение с использованием стороних методов
 // Console.WriteLine("Введите сколько пожелаете целых чисел  через пробел");
 // string str = Console.ReadLine();
 // int[] ConvertStrToInt(string arg)//Экспереметальный метод преобразования строки в массив
