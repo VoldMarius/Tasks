@@ -63,4 +63,3 @@ Console.WriteLine("Например, задан массив:");
 PrintMatrix(array2D);
 Console.Write("Среднее арифметическое каждого столбца:");
 PrintArray(FindArithmeticMeanElements(array2D));
-// "{0: 0.00}",arr[i]

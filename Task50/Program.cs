@@ -10,15 +10,6 @@
 // 8 4 2 4
 
 // 17 -> такого числа в массиве нет
-Console.WriteLine("Введите число cтрок массива m:  ");
-int m = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число столбцов массива n:  ");
-int n = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите минимальное знчение массива min:  ");
-double minNumb = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Введите максимальное знчение массива max:  ");
-double maxNumb = Convert.ToDouble(Console.ReadLine());
-
 
 double[,] CreateMatrixRndInt(int rows, int columns, double min, double max)
 {
@@ -62,7 +53,7 @@ bool FindElementByIndex(double[,] matrix, int x, int y)
         return false;
 
 }
-double[,] array2D = CreateMatrixRndInt(m, n, minNumb, maxNumb);
+double[,] array2D = CreateMatrixRndInt(3, 4, 1, 9);
 PrintMatrix(array2D);
 
 Console.WriteLine("Введите  (позицию элемента в двумерном массиве) число(index)i:  ");
@@ -72,12 +63,12 @@ int j = Convert.ToInt32(Console.ReadLine());
 
 while (i < 0 || j < 0)
 {
-    Console.WriteLine($"({i},{j})-->  индекс не может быть отрицательным");
+    Console.WriteLine($"{i}{j}-->  индекс не может быть отрицательным");
     Console.WriteLine("Введите  (позицию элемента в двумерном массиве) число(index)i:  ");
     i = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("Введите  (позицию элемента в двумерном массиве) число(index)j:  ");
     j = Convert.ToInt32(Console.ReadLine());
 }
 
-Console.WriteLine(FindElementByIndex(array2D, i, j) ? $"Элемент [{i}, {j}]-->такое число в массиве есть"
-                            : $"({i},{j})-->такого числа в массиве нет");
+Console.WriteLine(FindElementByIndex(array2D, i, j) ? $"Элемент {i}{j}-->такое число в массиве есть"
+                            : $"{i}{j}-->такого числа в массиве нет");
