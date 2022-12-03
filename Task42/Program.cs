@@ -3,7 +3,18 @@
 // 45 -> 101101
 // 3 -> 11
 // 2 -> 10
-
+void PrintArray(int[] array, string elem1, string elem2)
+{
+    Console.Write(elem1);
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (i < array.Length - 1)
+            Console.Write($"{array[i]},");
+        else
+            Console.Write($"{array[i]}");
+    }
+    Console.Write(elem2);
+}
 int[] Binary(int numb)
 {
     int numb1 = numb;
@@ -28,4 +39,4 @@ Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int[] binary = Binary(number);
 // Console.WriteLine(Binary(number));
-PrintArray(binary, "", "", "");
+PrintArray(Binary(20), "", "");
