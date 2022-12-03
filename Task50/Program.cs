@@ -70,5 +70,4 @@ while (i < 0 || j < 0)
     j = Convert.ToInt32(Console.ReadLine());
 }
 
-Console.WriteLine(FindElementByIndex(array2D, i, j) ? $"Элемент {i}{j}-->такое число в массиве есть"
-                            : $"{i}{j}-->такого числа в массиве нет");
+Console.WriteLine(FindElementByIndex(array2D, i, j) ? $"{Math.Round(array2D[i,j],2)}" : $"{i}{j} -->такого числа в массиве нет");
