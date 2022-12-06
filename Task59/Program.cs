@@ -13,8 +13,6 @@ int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             matrix[i, j] = rnd.Next(min, max + 1);
-            // TODO: вывести индексы массива.
-            // matrix[i, j] = i * 10 + j;
         }
     }
     return matrix;
@@ -78,7 +76,7 @@ PrintMatrix(matrix1, "", "", "");
 Console.WriteLine();
 int rowIndex1, columnIndex1;
 RowColumnIndexMinElem(matrix1, out rowIndex1, out columnIndex1);
-Console.WriteLine($"Минимальное число - {matrix1[rowIndex1,columnIndex1]}");
+Console.WriteLine($"Минимальное число - {matrix1[rowIndex1, columnIndex1]}");
 Console.WriteLine();
 int[,] matrix3 = DeleteRowColumnsMatrix(matrix1, rowIndex1, columnIndex1);
 PrintMatrix(matrix3, "", "", "");
