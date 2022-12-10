@@ -27,7 +27,7 @@ int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
     }
     return matrix;
 }
-int[] SummsStrings(int[,] matrix)
+int[] SummsStrings(int[,] matrix)//Метод нахождения сумм элементов каждой строки 
 {
     int[] matrixSummLines = new int[matrix.GetLength(0)];
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -42,7 +42,7 @@ int[] SummsStrings(int[,] matrix)
     }
     return matrixSummLines;
 }
-int[,] DataMatrixSummsStrings(int[,] matrix)
+int[,] DataMatrixSummsStrings(int[,] matrix)//Метод создания информационнго массива о сумме элеметов каждой строки данного массива
 {
     int[,] dataMatrix = new int[matrix.GetLength(0), matrix.GetLength(1) + 1];
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -62,7 +62,7 @@ int[,] DataMatrixSummsStrings(int[,] matrix)
     }
     return dataMatrix;
 }
-void PrintDataMatrix(int[,] matrix)
+void PrintDataMatrix(int[,] matrix)//Метод вывода массива с информацией о сумме элементов каждой строки
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -76,7 +76,7 @@ void PrintDataMatrix(int[,] matrix)
         Console.WriteLine("");
     }
 }
-int MinSummElementsString(int[] array)
+int MinSummElementsString(int[] array)//Метод нахождения строки массива с наименьшей суммой элементов
 {int index = 0;
     int length = array.Length;
     int min = array[0];
@@ -94,7 +94,8 @@ return index;
 }
 int[,] array2D = CreateMatrixRndInt(4, 4, -10, 5);
 Console.WriteLine();
-PrintDataMatrix( DataMatrixSummsStrings(array2D));
+Console.WriteLine("Например, задан массив:");
+PrintDataMatrix(DataMatrixSummsStrings(array2D));
 Console.WriteLine();
 int minSummElemString = MinSummElementsString(SummsStrings(array2D));
 Console.WriteLine($"строка с наименьшей суммой элементов:   {minSummElemString} строка");
