@@ -12,20 +12,12 @@ int SummaNaturalNumbers(int number1, int number2)
 {
     int summaNaturalNumbers = number2;
     if (number1 > number2)
-    {
-        {
-            summaNaturalNumbers = SummaNaturalNumbers(number1 - 1, number2) + number1;
-        }
-    }
+        summaNaturalNumbers = SummaNaturalNumbers(number1 - 1, number2) + number1;
+
     else if (number1 < number2)
-    {
-        {
-            summaNaturalNumbers = SummaNaturalNumbers(number1 + 1, number2) + number1;
-        }
+        summaNaturalNumbers = SummaNaturalNumbers(number1 + 1, number2) + number1;
 
-    }
-
-    return summaNaturalNumbers;
+return summaNaturalNumbers;
 }
 int numNegativ = 0;
 int Summ = SummaNaturalNumbers(num1, num2);
