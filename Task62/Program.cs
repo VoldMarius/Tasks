@@ -18,10 +18,9 @@ void PrintMatrix(int[,] matrix, string beginRow, string separatorElems, string e
         Console.WriteLine(endRow);
     }
 }
-int[,] SpireMatrix(int[,] matrix)
+int[,] SpireMatrix(int[,] matrix, int random)
 {
     int[,] spireMatrix = new int[matrix.GetLength(0), matrix.GetLength(1)];
-    int random = 1;
     int heightLimit = spireMatrix.GetLength(0);
     int widthLimit = spireMatrix.GetLength(1);
     for (int spire = 0; spire < heightLimit; spire++)
@@ -30,42 +29,44 @@ int[,] SpireMatrix(int[,] matrix)
         {
             for (int j = spire; j < widthLimit - spire; j++)
             {
-                if (i == spire & j == spire)
+                if (i == spire && j == spire)  // &&j!=widthLimit /2)
                 {
                     for (j = spire; j < widthLimit - spire; j++)
-
-                        spireMatrix[i, j] = random++;
+                        if (random < spireMatrix.Length) spireMatrix[i, j] = random++;
+                        else spireMatrix[i, j] = random--;
                 }
-                else if (i == (heightLimit + (spire + 1)) - heightLimit & j == widthLimit - (spire + 1))
+                else if (i == (spire + 1) && j == widthLimit - (spire + 1))
                 {
-                    for (i = (spire + 1); i < heightLimit - (spire + 1); i++)
-
-                        spireMatrix[i, j] = random++;
+                    for (i = (spire + 1); i < heightLimit - spire; i++)
+                        if (random < spireMatrix.Length) spireMatrix[i, j] = random++;
+                        else spireMatrix[i, j] = random--;
                 }
             }
         }
 
-        for (int i = heightLimit - (spire + 1); i > (spire - 1); i--)
+        for (int i = heightLimit - (spire + 1); i >= spire; i--)
         {
-            for (int j = widthLimit - (spire + 1); j > (spire - 1); j--)
+            for (int j = widthLimit - (spire + 1); j > spire - 1; j--)
             {
-                if (i == heightLimit - (spire + 1) & j == widthLimit - (spire + 1))
+                if (i == heightLimit - (spire + 1) && j == widthLimit - (spire + 1))
                 {
-                    for (j = widthLimit - (spire + 1); j > spire; j--)
-
-                        spireMatrix[i, j] = random++;
+                    for (j = widthLimit - (spire + 2); j > spire - 1; j--)
+                        if (random < spireMatrix.Length) spireMatrix[i, j] = random++;
+                        else spireMatrix[i, j] = random--;
                 }
-                else if (j == spire & i < heightLimit - (spire + 1))
+                else if (j == spire && i == heightLimit - (spire + 2) && spire < widthLimit / 2)
                 {
-                    for (i = heightLimit - (spire + 1); i > spire; i--)
-
-                        spireMatrix[i, j] = random++;
+                    for (i = heightLimit - (spire + 2); i > spire; i--)
+                        if (random < spireMatrix.Length) spireMatrix[i, j] = random++;
+                        else spireMatrix[i, j] = random--;
                 }
             }
+
+
         }
     }
     return spireMatrix;
 }
-int[,] matrixNew = new int[20,20];
-int[,] newSpireMatrix = SpireMatrix(matrixNew);
+int[,] matrixNew = new int[5, 7];
+int[,] newSpireMatrix = SpireMatrix(matrixNew, 100);
 PrintMatrix(newSpireMatrix, "", ",", "");

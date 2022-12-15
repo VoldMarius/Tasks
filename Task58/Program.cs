@@ -55,8 +55,8 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine("");
     }
 }
-int[,] matrix1 = CreateMatrixRndInt(5, 4, 2, 4);
-int[,] matrix2 = CreateMatrixRndInt(4, 7, 2, 4);
+int[,] matrix1 = CreateMatrixRndInt(4,5, 2, 4);
+int[,] matrix2 = CreateMatrixRndInt(3, 4, 2, 4);
 Console.WriteLine(" Например, даны 2 матрицы:");
 PrintMatrix(matrix1);
 Console.WriteLine();
